@@ -1,0 +1,34 @@
+# -*- restclient -*-
+#
+# Gets  all Github APIs, formats JSON, shows response status and headers underneath.
+# Also sends a User-Agent header, because the Github API requires this.
+#
+
+# Get all the people in the family
+GET http://localhost:8080/family
+
+# Create new person in the family
+POST http://localhost:8080/family
+Content-Type: application/json
+
+{
+        "name": "Pepito Fernandez",
+        "gender": "male",
+        "age": "35"
+}
+
+# Get a specific person in the family
+GET http://localhost:8080/family/fa3eef28-df10-4d68-b5ff-0ee247edaae9
+
+# Modify a person in the family
+PUT http://localhost:8080/family/fa3eef28-df10-4d68-b5ff-0ee247edaae9
+Content-Type: application/json
+
+{
+        "name": "Maria Lopez",
+        "gender": "female",
+        "age": "40"
+}
+
+# Delete a person from the family
+DELETE http://localhost:8080/family/fa3eef28-df10-4d68-b5ff-0ee247edaae9
