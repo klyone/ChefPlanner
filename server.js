@@ -2,6 +2,7 @@ import express from 'express';
 import {routerFamily} from './routes/family.js';
 import {routerCategory} from './routes/category.js';
 import {routerRecipe} from './routes/recipe.js';
+import {routerMeal} from './routes/meal.js';
 
 const serverPort = process.env.PORT ?? 8080;
 
@@ -13,6 +14,7 @@ server.use(express.json());
 server.use('/family', routerFamily);
 server.use('/category', routerCategory);
 server.use('/recipe', routerRecipe);
+server.use('/meal', routerMeal);
 
 server.get('/', (req, res) => {
     res.send("Hello World!");

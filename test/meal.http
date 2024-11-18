@@ -1,0 +1,37 @@
+# -*- restclient -*-
+#
+# Gets  all Github APIs, formats JSON, shows response status and headers underneath.
+# Also sends a User-Agent header, because the Github API requires this.
+#
+
+# Get all the meals
+GET http://localhost:8080/meal
+
+# Create new meal
+POST http://localhost:8080/meal
+Content-Type: application/json
+
+{
+        "date": "2024-11-12",
+        "lunch": [
+                 {"person" : "Pepito", "food" : "36050b3f-35cb-4360-b905-0794a80e73e2"},
+                 {"person" : "Maria", "food" : "36050b3f-35cb-4360-b905-0794a80e73e2"}
+                 ],
+        "dinner": [
+                {"person" : "Pepito", "food" : "36050b3f-35cb-4360-b905-0794a80e73e2"}
+        ]
+}
+
+# Get a specific meal
+GET http://localhost:8080/meal/2024-11-12
+
+# Modify a specific meal
+PUT http://localhost:8080/meal/2024-11-12
+Content-Type: application/json
+
+{
+        "lunch": []
+}
+
+# Delete a recipe
+DELETE http://localhost:8080/meal/2024-11-12
