@@ -19,7 +19,7 @@ routerFamily.get('/', (req, res) => {
 
 routerFamily.post('/', (req, res) => {
     const {name, age, gender} = req.body;
-    res.send(createPerson({name, age, gender}));
+    res.json(createPerson({name, age, gender}));
 });
 
 routerFamily.get('/:id', (req, res) => {
