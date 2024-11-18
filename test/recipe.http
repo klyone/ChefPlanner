@@ -13,16 +13,16 @@ Content-Type: application/json
 
 {
         "title": "Great recipe",
-        "ingredients": "-Salt\nTomatoes\nSugar",
+        "ingredients": ["Salt", "Tomato", "Sugar"],
         "duration": "120 min",
-        "steps": "1. Mix everything"
+        "steps": ["Mix everything"]
 }
 
 # Get a specific recipe
-GET http://localhost:8080/recipe/29812373-70f9-4d5d-b7d8-d3d8eb7f6369
+GET http://localhost:8080/recipe/36050b3f-35cb-4360-b905-0794a80e73e2
 
 # Modify a specific recipe
-PUT http://localhost:8080/recipe/29812373-70f9-4d5d-b7d8-d3d8eb7f6369
+PUT http://localhost:8080/recipe/36050b3f-35cb-4360-b905-0794a80e73e2
 Content-Type: application/json
 
 {
@@ -31,4 +31,4 @@ Content-Type: application/json
 }
 
 # Delete a recipe
-DELETE http://localhost:8080/recipe/29812373-70f9-4d5d-b7d8-d3d8eb7f6369
+DELETE http://localhost:8080/recipe/36050b3f-35cb-4360-b905-0794a80e73e2
