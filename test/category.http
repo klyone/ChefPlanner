@@ -1,0 +1,30 @@
+# -*- restclient -*-
+#
+# Gets  all Github APIs, formats JSON, shows response status and headers underneath.
+# Also sends a User-Agent header, because the Github API requires this.
+#
+
+# Get all the categories
+GET http://localhost:8080/category
+
+# Create new category
+POST http://localhost:8080/category
+Content-Type: application/json
+
+{
+        "name": "Meat"
+}
+
+# Get a specific category
+GET http://localhost:8080/category/meat
+
+# Modify a specific category
+PUT http://localhost:8080/category/meat
+Content-Type: application/json
+
+{
+        "newName": "Fish"
+}
+
+# Delete a category
+DELETE http://localhost:8080/category/fish
