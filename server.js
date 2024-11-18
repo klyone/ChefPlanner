@@ -1,8 +1,7 @@
 import express from 'express';
-import path from 'node:path';
-import crypto from 'node:crypto';
 import {routerFamily} from './routes/family.js';
 import {routerCategory} from './routes/category.js';
+import {routerRecipe} from './routes/recipe.js';
 
 const serverPort = process.env.PORT ?? 8080;
 
@@ -13,6 +12,7 @@ server.use(express.json());
 
 server.use('/family', routerFamily);
 server.use('/category', routerCategory);
+server.use('/recipe', routerRecipe);
 
 server.get('/', (req, res) => {
     res.send("Hello World!");

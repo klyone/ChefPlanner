@@ -1,0 +1,34 @@
+# -*- restclient -*-
+#
+# Gets  all Github APIs, formats JSON, shows response status and headers underneath.
+# Also sends a User-Agent header, because the Github API requires this.
+#
+
+# Get all the recipes
+GET http://localhost:8080/recipe
+
+# Create new recipe
+POST http://localhost:8080/recipe
+Content-Type: application/json
+
+{
+        "title": "Great recipe",
+        "ingredients": "-Salt\nTomatoes\nSugar",
+        "duration": "120 min",
+        "steps": "1. Mix everything"
+}
+
+# Get a specific recipe
+GET http://localhost:8080/recipe/29812373-70f9-4d5d-b7d8-d3d8eb7f6369
+
+# Modify a specific recipe
+PUT http://localhost:8080/recipe/29812373-70f9-4d5d-b7d8-d3d8eb7f6369
+Content-Type: application/json
+
+{
+        "title": "Bad recipe",
+        "duration": "34 min"
+}
+
+# Delete a recipe
+DELETE http://localhost:8080/recipe/29812373-70f9-4d5d-b7d8-d3d8eb7f6369
